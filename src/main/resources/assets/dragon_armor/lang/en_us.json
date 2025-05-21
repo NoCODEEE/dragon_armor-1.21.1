@@ -1,0 +1,17 @@
+{
+  "item.dragon_armor.dragon_upgrade_template": "Dragon Template",
+  "item.dragon_armor.warden_heart": "Warden Heart",
+
+  "item.dragon_armor.dragon_helmet": "Dragon Helmet",
+  "item.dragon_armor.dragon_chestplate": "Dragon Chestplate",
+  "item.dragon_armor.dragon_legging": "Dragon Legging",
+  "item.dragon_armor.dragon_boots": "Dragon Boots",
+
+
+  "upgrade.dragon_armor.dragon_upgrade.applies_to": "Netherite Equipment",
+  "upgrade.dragon_armor.dragon_upgrade.ingredients": "Dragon Egg",
+  "upgrade.dragon_armor.dragon_upgrade.title": "Dragon Upgrade",
+  "upgrade.dragon_armor.dragon_upgrade.base_slot_description": "Netherite Equipment",
+  "upgrade.dragon_armor.dragon_upgrade.additions_slot_description": "Dragon Egg"
+
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:conduit"
+    },
+    "N": {
+      "item": "minecraft:netherite_upgrade_smithing_template"
+    },
+    "S": {
+      "item": "minecraft:nether_star"
+    },
+    "W": {
+      "item": "dragon_armor:warden_heart"
+    },
+    "X": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "pattern": [
+    "XWX",
+    "SNS",
+    "XCX"
+  ],
+  "result": {
+    "count": 1,
+    "id": "dragon_armor:dragon_upgrade_template"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:dragon_egg"
+  },
+  "base": {
+    "item": "minecraft:netherite_boots"
+  },
+  "result": {
+    "count": 1,
+    "id": "dragon_armor:dragon_boots"
+  },
+  "template": {
+    "item": "dragon_armor:dragon_upgrade_template"
+  }
+}
