@@ -1,5 +1,5 @@
 {
-	"required": true,
+	"required": false,
 	"package": "net.byebye007x.dragon_armor.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [

@@ -27,7 +27,6 @@ public class ModArmorItem extends ArmorItem {
                                     new StatusEffectInstance(StatusEffects.JUMP_BOOST, 400, 1, false, false)))
                     .build();
 
-    // Static UUIDs for attributes
     private static final Identifier DRAGON_SPEED = Identifier.of(DragonArmor.MOD_ID, "dragon_armor_speed");
     private static final Identifier DRAGON_HEALTH = Identifier.of(DragonArmor.MOD_ID, "dragon_armor_heath_boost");
 
