@@ -6,7 +6,9 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.SmithingTransformRecipeJsonBuilder;
+import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
@@ -34,6 +36,28 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('S', Items.NETHER_STAR)
                 .criterion(hasItem(ModItems.WARDEN_HEART), conditionsFromItem(ModItems.WARDEN_HEART))
                 .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.BEDROCK_DRILL)
+                .pattern(" B ")
+                .pattern("DND")
+                .pattern("IRI")
+                .input('B', ModItems.BEDROCK_SHARD)
+                .input('N', Items.NETHERITE_INGOT)
+                .input('D', Items.DIAMOND)
+                .input('I', Items.IRON_BLOCK)
+                .input('R', Items.REDSTONE_BLOCK)
+                .criterion(hasItem(ModItems.BEDROCK_SHARD), conditionsFromItem(ModItems.BEDROCK_SHARD))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.BEDROCK_CRACKER)
+                .pattern("N")
+                .pattern("B")
+                .input('B', Items.BREEZE_ROD)
+                .input('N', Items.NETHERITE_INGOT)
+                .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
+                .offerTo(recipeExporter);
+
+        offerCompactingRecipe(recipeExporter, RecipeCategory.MISC, Items.WITHER_SKELETON_SKULL, ModItems.WITHER_SKELETON_SKULL_PART);
 
         SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(ModItems.DRAGON_UPGRADE_TEMPLATE),
                         Ingredient.ofItems(Items.NETHERITE_HELMET),

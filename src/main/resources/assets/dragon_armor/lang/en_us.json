@@ -1,10 +1,15 @@
 {
   "item.dragon_armor.dragon_upgrade_template": "Dragon Template",
   "item.dragon_armor.warden_heart": "Warden Heart",
+  "item.dragon_armor.bedrock_shard": "Bedrock Shard",
+  "item.dragon_armor.wither_skeleton_skull_part": "Wither Skull Part",
+
+  "item.dragon_armor.bedrock_cracker": "Bedrock Cracker",
+  "item.dragon_armor.bedrock_drill": "Bedrock Drill",
 
   "item.dragon_armor.dragon_helmet": "Dragon Helmet",
   "item.dragon_armor.dragon_chestplate": "Dragon Chestplate",
-  "item.dragon_armor.dragon_legging": "Dragon Legging",
+  "item.dragon_armor.dragon_legging": "Dragon Leggings",
   "item.dragon_armor.dragon_boots": "Dragon Boots",
 
 

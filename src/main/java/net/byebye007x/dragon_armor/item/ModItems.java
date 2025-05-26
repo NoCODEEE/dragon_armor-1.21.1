@@ -1,12 +1,11 @@
 package net.byebye007x.dragon_armor.item;
 
 import net.byebye007x.dragon_armor.DragonArmor;
+import net.byebye007x.dragon_armor.item.custom.BedrockCrackerItem;
+import net.byebye007x.dragon_armor.item.custom.BedrockDrillItem;
 import net.byebye007x.dragon_armor.item.custom.ModArmorItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.SmithingTemplateItem;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
@@ -31,6 +30,11 @@ public class ModItems {
             List.of(Identifier.of("minecraft", "item/empty_slot_diamond"))   // ghost texture for additions slot (can be anything)
     ));
     public static final Item WARDEN_HEART = registerItem("warden_heart", new Item(new Item.Settings().rarity(Rarity.RARE)));
+    public static final Item WITHER_SKELETON_SKULL_PART = registerItem("wither_skeleton_skull_part", new Item(new Item.Settings()));
+    public static final Item BEDROCK_SHARD = registerItem("bedrock_shard", new Item(new Item.Settings().fireproof()));
+
+    public static final Item BEDROCK_CRACKER = registerItem("bedrock_cracker", new BedrockCrackerItem(new Item.Settings().maxDamage(1)));
+    public static final Item BEDROCK_DRILL = registerItem("bedrock_drill", new BedrockDrillItem(ToolMaterials.NETHERITE, new Item.Settings().fireproof()));
 
     public static final Item DRAGON_HELMET = registerItem("dragon_helmet",
             new ModArmorItem(ModArmorMaterials.DRAGON_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
@@ -55,12 +59,18 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(fabricItemGroupEntries -> {
             fabricItemGroupEntries.add(WARDEN_HEART);
             fabricItemGroupEntries.add(DRAGON_UPGRADE_TEMPLATE);
+            fabricItemGroupEntries.add(BEDROCK_SHARD);
+            fabricItemGroupEntries.add(WITHER_SKELETON_SKULL_PART);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(fabricItemGroupEntries -> {
             fabricItemGroupEntries.add(DRAGON_HELMET);
             fabricItemGroupEntries.add(DRAGON_CHESTPLATE);
             fabricItemGroupEntries.add(DRAGON_LEGGING);
             fabricItemGroupEntries.add(DRAGON_BOOTS);
+        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(fabricItemGroupEntries -> {
+            fabricItemGroupEntries.add(BEDROCK_CRACKER);
+            fabricItemGroupEntries.add(BEDROCK_DRILL);
         });
     }
 }

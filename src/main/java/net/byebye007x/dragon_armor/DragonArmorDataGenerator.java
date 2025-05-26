@@ -1,5 +1,6 @@
 package net.byebye007x.dragon_armor;
 
+import net.byebye007x.dragon_armor.datagen.ModBlockTagProvider;
 import net.byebye007x.dragon_armor.datagen.ModItemTagProvider;
 import net.byebye007x.dragon_armor.datagen.ModModelProvider;
 import net.byebye007x.dragon_armor.datagen.ModRecipeProvider;
@@ -12,6 +13,7 @@ public class DragonArmorDataGenerator implements DataGeneratorEntrypoint {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
         pack.addProvider(ModItemTagProvider::new);
+        pack.addProvider(ModBlockTagProvider::new);
         pack.addProvider(ModRecipeProvider::new);
         pack.addProvider(ModModelProvider::new);
 

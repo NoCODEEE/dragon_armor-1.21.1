@@ -22,12 +22,17 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.DRAGON_HELMET)
                 .add(ModItems.DRAGON_CHESTPLATE)
                 .add(ModItems.DRAGON_LEGGING)
-                .add(ModItems.DRAGON_BOOTS);
+                .add(ModItems.DRAGON_BOOTS)
+                .add(ModItems.BEDROCK_SHARD)
+                .add(ModItems.BEDROCK_CRACKER)
+                .add(ModItems.BEDROCK_DRILL)
+        ;
 
         getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
                 .add(ModItems.DRAGON_HELMET)
                 .add(ModItems.DRAGON_CHESTPLATE)
                 .add(ModItems.DRAGON_LEGGING)
-                .add(ModItems.DRAGON_BOOTS);
+                .add(ModItems.DRAGON_BOOTS)
+        ;
     }
 }
